@@ -17,8 +17,6 @@ h3 {
   font-size: 5rem;
   font-weight: 250;
   /* top: 248px; */
-  width: 40%;
-  height: 100px;
   text-align: left;
   letter-spacing: NaNpx;
   opacity: 1;
@@ -40,11 +38,6 @@ body {
   margin: 0;
   max-width: 100%;
 }
-
-#landing {
-  z-index: 1;
-}
-
 .topnav {
   background-color: transparent;
   overflow: hidden;
@@ -94,11 +87,6 @@ body {
   margin-right: 10%;
 }
 
-#landing {
-  background-image: url("rynek_pierwotny.png");
-  background-size: cover;
-  background-position: center;
-}
 .list-element {
   color: #f3f3f3;
   font-size: 15px;
@@ -110,6 +98,9 @@ body {
 }
 
 #landing {
+  background-image: url("rynek_pierwotny.png");
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,16 +125,19 @@ body {
 .sprzedaj-heading {
   padding-bottom: 15%;
 }
+
 .o-nas-container {
   display: flex;
-  height: 50vh;
+  height: 40vh;
   background-color: #f5f6f8;
+  max-width: 100%;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .about-us-main {
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-left: 10%;
 }
 .about-us {
   margin-left: 10%;
@@ -153,10 +147,10 @@ body {
   font-size: small;
   color: #131314;
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  padding-left: 10%;
 }
 @keyframes fade-in {
   from {
@@ -181,17 +175,6 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #131314;
-}
-
-.card-2 {
-  width: 500px;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 0px -6.8px 9.8px rgba(0, 0, 0, 0.003),
-    0px -10.8px 23.5px rgba(0, 0, 0, 0.008),
-    0px -10.3px 44.3px rgba(0, 0, 0, 0.016),
-    0px -1.5px 79.1px rgba(0, 0, 0, 0.026),
-    0px 28.5px 147.9px rgba(0, 0, 0, 0.042), 0px 174px 354px rgba(0, 0, 0, 0.07);
 }
 
 h5 {
@@ -238,31 +221,27 @@ button {
   cursor: pointer;
 }
 
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
+.centered-button {
   justify-content: center;
-  align-items: left;
-  padding: 80px 0 130px;
+  justify-items: center;
+  display: flex;
+  background-color: #f3f3f3;
+  padding-bottom: 20px;
+}
+.rectangle-button {
+  justify-content: center;
+  justify-items: center;
+  background-color: #c89f77;
+  color: #131314;
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+}
+.button-link {
+  text-decoration: none;
+  color: #131314;
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet {
-  box-shadow: none;
-  background: #af8451;
-  width: 16px;
-  height: 16px;
-}
-
-.swiper-horizontal .swiper-pagination-bullets.swiper-pagination-horizontal {
-  top: auto;
-  bottom: 56px;
-}
-
-.swiper-slide img {
-  height: 500px;
-  width: 500px;
-  margin-bottom: 10px;
-}
 .offers-text {
   display: flex;
   flex-direction: column;
@@ -302,7 +281,7 @@ button {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-color: #f5f6f8;
 }
 
@@ -318,31 +297,46 @@ button {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
 }
-.card-image {
-  width: 18em;
-  height: 25em;
-  border: #707070 1px solid;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   margin: 10px;
+}
+.row {
+  max-width: 33.33%;
+  max-height: 33.33%;
+  margin: 20px;
+}
+.card-image {
+  display: flex;
+  flex-direction: column;
+  /* border: #707070 1px solid; */
+  margin: 10px;
+}
+.image {
+  max-width: 20em;
+  max-height: 20em;
 }
 .card-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 5px;
   color: #f3f3f3;
-  width: 200px;
+  background-color: #131314;
+  width: 100%;
+  padding: 5%;
+  height: fit-content;
 }
 .card-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   font-weight: 100;
   flex-wrap: wrap;
-  margin-top: 5px;
-  color: #f3f3f3;
-  width: 200px;
-  padding: 10px;
+  color: #131314;
+  width: 100%;
 }
 .team-text {
   display: flex;
@@ -376,7 +370,7 @@ footer {
   font-size: 14px;
   font-weight: 100;
   text-align: center;
-
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -437,10 +431,8 @@ footer {
     color: #131314;
     font-size: 3rem;
     font-weight: 250;
-    top: 348px;
     width: 80%;
-    height: 50px;
-    margin-left: 1em;
+    height: 100px;
     text-align: left;
     letter-spacing: NaNpx;
     opacity: 1;
@@ -461,8 +453,8 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 260vh;
-    background-color: #131314;
+    height: 100%;
+    background-color: #f5f6f8;
   }
   .team-members {
     display: flex;
@@ -477,27 +469,26 @@ footer {
     margin: auto;
     text-align: center;
   }
-  .sprzedaj-heading {
-    padding-bottom: 30%;
-    background-color: #f3f3f340;
-  }
   .o-nas-container {
     display: flex;
+    align-items: center;
     flex-direction: column;
     height: 60vh;
     background-color: #f5f6f8;
+    text-align: center;
+  }
+  .zero-percent-text {
+    font-size: small;
+    color: #131314;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .about-us-main {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 100vh;
-    margin-left: 5%;
-  }
-  .zero-percent {
-    font-size: 5rem;
-    color: #af8451;
-    margin-right: 20px;
   }
   .najnowsze-oferty-container {
     display: flex;
@@ -507,11 +498,6 @@ footer {
     height: 100vh;
     background-color: #131314;
   }
-  .swiper-slide img {
-    height: 300px;
-    width: 300px;
-    margin-bottom: 10px;
-  }
   .offers-text {
     display: flex;
     flex-direction: column;
@@ -520,13 +506,7 @@ footer {
     margin-top: 10px;
     font-size: small;
   }
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 70px;
-  }
+
   .team-description-3 {
     color: #7e7e7e;
     margin-bottom: 10px;
@@ -542,5 +522,9 @@ footer {
     height: 50vh;
     color: white;
     text-align: center;
+  }
+  .row {
+    max-width: 100%;
+    max-height: 50%;
   }
 }

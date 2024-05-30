@@ -17,8 +17,7 @@ h3 {
   font-size: 5rem;
   font-weight: 250;
   /* top: 248px; */
-  width: 40%;
-  height: 100px;
+  width: 100%;
   margin-left: 10%;
   text-align: left;
   letter-spacing: NaNpx;
@@ -136,7 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
   color: #f3f3f3;
   background-image: url("background_2.png");
   background-size: cover;
@@ -147,37 +146,31 @@ body {
 }
 .o-nas-container {
   display: flex;
-  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
 .about-us-main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
   margin-left: 5%;
-}
-.about-us {
-  margin-left: 10%;
-  margin-bottom: 2em;
 }
 .zero-percent-main {
   display: flex;
-  flex-direction: column;
-}
-.zero-percent-container {
-  display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
+  justify-content: center;
 }
-.zero-percent {
-  font-size: 12rem;
-  color: #af8451;
-  margin-right: 20px;
-}
+
 .zero-percent-text {
   font-size: small;
   color: #131314;
-  max-width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-left: 10%;
 }
 @keyframes fade-in {
   from {
@@ -198,21 +191,9 @@ body {
 }
 #najnowsze-oferty {
   display: flex;
+  height: 50vh;
   align-items: center;
-  width: 100%;
-  height: 100vh;
   background-color: #131314;
-}
-
-.card-2 {
-  width: 500px;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 0px -6.8px 9.8px rgba(0, 0, 0, 0.003),
-    0px -10.8px 23.5px rgba(0, 0, 0, 0.008),
-    0px -10.3px 44.3px rgba(0, 0, 0, 0.016),
-    0px -1.5px 79.1px rgba(0, 0, 0, 0.026),
-    0px 28.5px 147.9px rgba(0, 0, 0, 0.042), 0px 174px 354px rgba(0, 0, 0, 0.07);
 }
 
 h5 {
@@ -227,19 +208,6 @@ h6 {
   font-weight: 400;
   font-size: 14px;
   align-self: stretch;
-}
-
-input,
-button {
-  display: block;
-  width: 240px;
-  height: 48px;
-  margin: 0 70px;
-  border-radius: 24px;
-  font-size: 16px;
-  font-family: inherit;
-  outline-color: transparent;
-  text-align: center;
 }
 
 input {
@@ -259,31 +227,6 @@ button {
   cursor: pointer;
 }
 
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding: 80px 0 130px;
-}
-
-.swiper .swiper-pagination .swiper-pagination-bullet {
-  box-shadow: none;
-  background: #af8451;
-  width: 16px;
-  height: 16px;
-}
-
-.swiper-horizontal .swiper-pagination-bullets.swiper-pagination-horizontal {
-  top: auto;
-  bottom: 56px;
-}
-
-.swiper-slide img {
-  height: 500px;
-  width: 500px;
-  margin-bottom: 10px;
-}
 .offers-text {
   display: flex;
   flex-direction: column;
@@ -319,58 +262,12 @@ button {
     transform: scale(1);
   }
 }
-#team {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #131314;
-}
 
-.team-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  margin-left: 1em;
-  margin-right: 5%;
-  max-height: 80vh;
-}
-
-.team-member {
-  width: calc(33.333% - 20px);
-  margin-bottom: 20px;
-}
 .row {
   max-width: 33.33%;
   max-height: 50%;
 }
-.card-image {
-  width: 200px;
-  height: 200px;
-  border: #707070 1px solid;
-  margin: 10px;
-}
-.card-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 5px;
-  color: #f3f3f3;
-  width: 100%;
-}
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-weight: 100;
-  flex-wrap: wrap;
-  margin-top: 5px;
-  color: #f3f3f3;
-  width: 90%;
-  padding: 10px;
-}
+
 .team-text {
   display: flex;
   flex-direction: column;
@@ -379,19 +276,6 @@ button {
   margin-top: 10px;
   font-size: small;
   margin-left: 10%;
-}
-.team-description-1 {
-  color: #7e7e7e;
-  margin-bottom: 10px;
-}
-
-.team-description-2 {
-  color: #c89f77;
-}
-.team-description-3 {
-  color: #7e7e7e;
-  margin-bottom: 10px;
-  width: 50%;
 }
 footer {
   display: flex;
@@ -484,27 +368,7 @@ footer {
     animation: fade-in 2s;
     text-align: center;
   }
-  #team {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 300vh;
-    background-color: #131314;
-  }
-  .team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-  }
-  .team-text {
-    width: 80%;
-    margin-left: 0;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+
   .sprzedaj-heading {
     padding-bottom: 30%;
     background-color: #f3f3f340;
@@ -526,14 +390,10 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-color: #131314;
   }
-  .swiper-slide img {
-    height: 300px;
-    width: 300px;
-    margin-bottom: 10px;
-  }
+
   .offers-text {
     display: flex;
     flex-direction: column;
@@ -541,20 +401,6 @@ footer {
     width: 100%;
     margin-top: 10px;
     font-size: small;
-  }
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 70px;
-  }
-  .team-description-3 {
-    color: #7e7e7e;
-    margin-bottom: 10px;
-    width: 80%;
-    justify-content: center;
-    text-align: center;
   }
   .row {
     max-width: 100%;
