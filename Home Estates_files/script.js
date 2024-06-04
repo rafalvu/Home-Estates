@@ -1,7 +1,19 @@
-document.querySelector('.logo').addEventListener('click', function(e) {
-    e.target.classList.add('logo-clicked');
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    speed: 500,
   
-    setTimeout(function() {
-      e.target.classList.remove('logo-clicked');
-    }, 300); // remove the class after the animation duration
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });

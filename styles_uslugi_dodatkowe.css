@@ -14,22 +14,11 @@ h2 {
 }
 h3 {
   color: #131314;
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 250;
-  /* top: 248px; */
+  height: 10vh;
   width: 100%;
-  margin-left: 10%;
-  text-align: left;
-  letter-spacing: NaNpx;
-  opacity: 1;
-  animation: fade-in 2s;
-}
-h4 {
-  color: #f3f3f3;
-  font-size: 5rem;
-  font-weight: 250;
-  top: 348px;
-  text-align: left;
+  text-align: center;
   letter-spacing: NaNpx;
   opacity: 1;
   animation: fade-in 2s;
@@ -39,10 +28,6 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   max-width: 100%;
-}
-
-#landing {
-  z-index: 1;
 }
 
 .topnav {
@@ -94,11 +79,6 @@ body {
   margin-right: 10%;
 }
 
-#landing {
-  background-image: url("ali-moradi-Erg07pIM_ac-unsplas.png");
-  background-size: cover;
-  background-position: center;
-}
 .list-element {
   color: #f3f3f3;
   font-size: 15px;
@@ -111,12 +91,16 @@ body {
 
 #landing {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start; /* Aligns children to the start of the container */
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   color: white;
   text-align: center;
+  background-image: url("uslugi_dodatkowe@2x.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
 .landing-text {
@@ -130,7 +114,39 @@ body {
   opacity: 1;
   animation: fade-in 2s;
 }
-
+.landing-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%;
+  height: 80vh;
+  width: 30%;
+  background-color: #131314a1;
+}
+#services{
+  background-color: #f3f3f3;
+  margin: 0;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.services-text{
+  padding: 20px;
+}
 .sprzedaj {
   display: flex;
   flex-direction: column;
@@ -141,37 +157,7 @@ body {
   background-size: cover;
   background-position: center;
 }
-.sprzedaj-heading {
-  padding-bottom: 15%;
-}
-.o-nas-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-}
-.about-us-main {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-left: 5%;
-}
-.zero-percent-main {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
 
-.zero-percent-text {
-  font-size: small;
-  color: #131314;
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  padding-left: 10%;
-}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -188,26 +174,6 @@ body {
   to {
     opacity: 1;
   }
-}
-#najnowsze-oferty {
-  display: flex;
-  height: 50vh;
-  align-items: center;
-  background-color: #131314;
-}
-
-h5 {
-  color: #f3f3f3;
-  margin: 10 0 6px;
-  font-weight: 500;
-}
-
-h6 {
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 24px;
-  font-weight: 400;
-  font-size: 14px;
-  align-self: stretch;
 }
 
 input {
@@ -220,22 +186,6 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
-button {
-  background: #af8451;
-  color: #f9f9f9;
-  border: 0;
-  cursor: pointer;
-}
-
-.offers-text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 50%;
-  margin-top: 10px;
-  font-size: small;
-  margin-left: 10%;
-}
 .logo {
   cursor: pointer;
   transition: 0.3s ease-out;
@@ -268,28 +218,41 @@ button {
   max-height: 50%;
 }
 
-.team-text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 80%;
-  margin-top: 10px;
-  font-size: small;
-  margin-left: 10%;
-}
 footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
+  flex-direction: column;
+  height: auto;
   background-color: #131314;
   color: #f3f3f3;
   font-size: 14px;
   font-weight: 100;
   text-align: center;
-
   bottom: 0;
   width: 100%;
+}
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #131314;
+  color: #f3f3f3;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.footer-contact {
+  text-align: left;
+  color: #f3f3f3;
+  text-decoration: none;
+}
+.footer-link {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+.footer-logo{
+  margin-top: 20px;
 }
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 800px) {
@@ -336,6 +299,7 @@ footer {
     font-weight: 250;
     color: #f3f3f3;
     margin: 0;
+    text-align: center;
   }
   h2 {
     font-size: 2rem;
@@ -343,67 +307,61 @@ footer {
     font-weight: 100;
     color: #f3f3f3;
     margin-bottom: 10px;
+    text-align: center;
   }
   h3 {
     color: #131314;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 250;
-    top: 348px;
     width: 80%;
-    height: 50px;
-    margin-left: 1em;
-    text-align: left;
+    height: 10vh;
+    text-align: center;;
     letter-spacing: NaNpx;
     opacity: 1;
     animation: fade-in 2s;
-  }
-  h4 {
-    color: #f3f3f3;
-    font-size: 3rem;
-    font-weight: 250;
-    top: 348px;
-    text-align: left;
-    letter-spacing: NaNpx;
-    opacity: 1;
-    animation: fade-in 2s;
-    text-align: center;
-  }
-
-  .sprzedaj-heading {
-    padding-bottom: 30%;
-    background-color: #f3f3f340;
-  }
-  .o-nas-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  .about-us-main {
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 100vh;
-    margin-left: 5%;
-  }
-  .najnowsze-oferty-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 50vh;
-    background-color: #131314;
-  }
-
-  .offers-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-    font-size: small;
+    margin: 0;
   }
   .row {
     max-width: 100%;
     max-height: 50%;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .landing-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+    height: 80vh;
+    width: 100%;
+    background-color: #131314a1;
+  }
+  #services, #landing {
+    overflow: auto;
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-contact{
+    text-align: center;
   }
 }
