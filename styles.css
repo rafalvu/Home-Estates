@@ -125,9 +125,7 @@ body {
 }
 
 .landing-text {
-  top: 348px;
   width: 80%;
-  height: 331px;
   margin: 0px;
   text-align: left;
   letter-spacing: NaNpx;
@@ -484,7 +482,7 @@ footer {
   color: #f3f3f3;
   text-decoration: none;
 }
-.footer-logo{
+.footer-logo {
   margin-top: 20px;
 }
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -532,6 +530,7 @@ footer {
     font-weight: 250;
     color: #f3f3f3;
     margin: 0;
+    text-align: left;
   }
   h2 {
     font-size: 2rem;
@@ -567,8 +566,24 @@ footer {
   .landing-text {
     text-align: center;
   }
-  .landing-container {
+  #landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 50vh;
+    color: white;
+    text-align: center;
+  }
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   #team {
     display: flex;
@@ -600,9 +615,22 @@ footer {
   }
 
   .sprzedaj-heading {
-    margin-top: 30vh;
     padding: 0;
     margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 12vh;
+  }
+  .sprzedaj {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+    color: #f3f3f3;
+    background-image: url("background_2.png");
+    background-size: cover;
+    background-position: center;
   }
   textarea:focus {
     outline: none;
@@ -618,7 +646,7 @@ footer {
   .o-nas-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
   }
   .about-us-main {
     justify-content: center;
@@ -634,6 +662,24 @@ footer {
     font-size: 6rem;
     color: #af8451;
     margin-right: 20px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .zero-percent-text {
+    font-size: small;
+    color: #131314;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .zero-percent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .zero-percent-main {
     display: flex;
@@ -667,8 +713,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0 70px;
+    padding: 50px 0 90px;
   }
+
   .team-description-3 {
     color: #7e7e7e;
     margin-bottom: 10px;
@@ -691,7 +738,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .footer-contact{
+  .footer-contact {
     text-align: center;
   }
 }
