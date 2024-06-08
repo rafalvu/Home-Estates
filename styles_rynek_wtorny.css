@@ -122,7 +122,7 @@ body {
   opacity: 1;
   animation: fade-in 2s;
 }
-.landing-container{
+.landing-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,28 +224,26 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.centered-button{
+.centered-button {
   justify-content: center;
   justify-items: center;
   display: flex;
   background-color: #f3f3f3;
   padding-bottom: 20px;
-  
 }
-.rectangle-button{
+.rectangle-button {
   justify-content: center;
   justify-items: center;
-  background-color: #C89F77;
-  color:#131314;
+  background-color: #c89f77;
+  color: #131314;
   border-radius: 2px;
   border: 0;
   text-decoration: none;
   cursor: pointer;
 }
-.button-link{
+.button-link {
   text-decoration: none;
   color: #131314;
-
 }
 
 .offers-text {
@@ -321,7 +319,7 @@ input::placeholder {
   /* border: #707070 1px solid; */
   margin: 10px;
 }
-.image{
+.image {
   max-width: 20em;
   max-height: 20em;
 }
@@ -399,7 +397,7 @@ footer {
   color: #f3f3f3;
   text-decoration: none;
 }
-.footer-logo{
+.footer-logo {
   margin-top: 20px;
 }
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -420,7 +418,8 @@ footer {
   }
   .nav-content {
     margin-top: 20px;
-    background-color: #7e7e7e42;
+    background-color: #7e7e7ed1;
+    border-radius: 5px;
   }
   .topnav.responsive a.icon {
     position: absolute;
@@ -570,7 +569,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .footer-contact{
+  .footer-contact {
     text-align: center;
   }
 }

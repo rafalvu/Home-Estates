@@ -425,7 +425,8 @@ footer {
   }
   .nav-content {
     margin-top: 20px;
-    background-color: #7e7e7e42;
+    background-color: #7e7e7ed1;
+    border-radius: 5px;
   }
   .topnav.responsive a.icon {
     position: absolute;
