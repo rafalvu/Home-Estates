@@ -92,7 +92,6 @@ body {
 #landing {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; /* Aligns children to the start of the container */
   align-items: center;
   height: 80vh;
   color: white;
@@ -100,13 +99,10 @@ body {
   background-image: url("uslugi_dodatkowe@2x.png");
   background-size: cover;
   background-position: center;
-  z-index: 1;
 }
 
 .landing-text {
-  top: 348px;
   width: 80%;
-  height: 331px;
   margin: 0px;
   text-align: left;
   letter-spacing: NaNpx;
@@ -340,13 +336,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10%;
-    height: 80vh;
     width: 100%;
+    height: 100%;
     background-color: #131314a1;
   }
   #services, #landing {
     overflow: auto;
+  }
+  #landing{
+    height: 50vh;
   }
   .service {
     display: flex;
@@ -361,6 +359,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: auto;
   }
   .footer-contact{
     text-align: center;

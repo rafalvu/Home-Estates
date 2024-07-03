@@ -112,9 +112,7 @@ body {
 }
 
 .landing-text {
-  top: 348px;
   width: 80%;
-  height: 331px;
   margin: 0px;
   text-align: left;
   letter-spacing: NaNpx;
@@ -560,6 +558,9 @@ footer {
     padding: 0;
     margin: 0;
   }
+  .landing-text{
+    text-align: center;
+  }
   .row {
     max-width: 100%;
     max-height: 50%;
@@ -568,6 +569,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: auto;
   }
   .footer-contact {
     text-align: center;

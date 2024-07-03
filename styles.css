@@ -201,7 +201,8 @@ textarea:focus {
   align-items: center;
   width: 100%;
   height: 100vh;
-  margin-left: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .about-us {
   margin-left: 10%;
@@ -378,6 +379,7 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
 #team {
   display: flex;
   align-items: center;
+  justify-content: center; /* Add this line to center horizontally */
   width: 100%;
   height: 100vh;
   background-color: #131314;
@@ -387,18 +389,11 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 100%;
-  margin-left: 1em;
-  margin-right: 5%;
+  max-width: 60%;
   max-height: 80vh;
-}
-
-.team-member {
-  width: calc(33.333% - 20px);
-  margin-bottom: 20px;
+  margin: auto; /* Add this line to center within #team */
 }
 .row {
-  max-width: 33.33%;
   max-height: 50%;
 }
 .card-image {
@@ -407,35 +402,27 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
   border: #707070 1px solid;
   margin: 10px;
 }
+
 .card-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 5px;
-  color: #f3f3f3;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+    color: #f3f3f3;
 }
+
 .card-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-weight: 100;
   flex-wrap: wrap;
-  margin-top: 5px;
+  margin-top: 40px;
   color: #f3f3f3;
   width: 90%;
   padding: 10px;
 }
-.team-text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 80%;
-  margin-top: 10px;
-  font-size: small;
-  margin-left: 10%;
-}
+
 .team-description-1 {
   color: #7e7e7e;
   margin-bottom: 10px;
@@ -460,6 +447,7 @@ footer {
   text-align: center;
   bottom: 0;
   width: 100%;
+  margin: auto;
 }
 .footer-info {
   display: flex;
@@ -554,7 +542,6 @@ footer {
     animation: fade-in 2s;
   }
   h4 {
-    color: #f3f3f3;
     font-size: 3rem;
     font-weight: 250;
     top: 348px;
@@ -590,7 +577,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 250vh;
+    height: auto;
     margin-bottom: auto;
     background-color: #131314;
   }
@@ -599,15 +586,11 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-height: fit-content;
     width: 100%;
     margin: 0;
   }
-  .team-text {
-    width: 80%;
-    margin-left: 0;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+
   .sprzedaj {
     flex-direction: column;
     background-color: #f3f3f36d;
@@ -724,6 +707,7 @@ footer {
   }
   .card-2 {
     max-width: 100%;
+    margin-bottom: auto;
   }
   .najnowsze-oferty-container {
     height: 100%;
@@ -732,6 +716,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: auto;
   }
   .footer-contact {
     text-align: center;

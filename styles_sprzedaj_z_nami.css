@@ -104,9 +104,7 @@ body {
 }
 
 .landing-text {
-  top: 348px;
   width: 80%;
-  height: 331px;
   margin: 0px;
   text-align: left;
   letter-spacing: NaNpx;
@@ -340,6 +338,20 @@ footer {
   #services,
   #landing {
     overflow: auto;
+    height: 50vh;
+  }
+  .landing-text {
+    width: 80%;
+    margin: 0px;
+    text-align: center;
+    letter-spacing: NaNpx;
+    color: #f3f3f3;
+    opacity: 1;
+    animation: fade-in 2s;
+  }
+  .landing-description {
+    text-align: center;
+    width: 80%;
   }
 
   .row {
@@ -368,6 +380,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: auto;
   }
   .footer-contact {
     text-align: center;
