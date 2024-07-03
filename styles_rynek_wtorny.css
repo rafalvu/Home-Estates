@@ -514,6 +514,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 80%;
+    margin-top: 10px;
   }
   .najnowsze-oferty-container {
     display: flex;
@@ -558,7 +559,7 @@ footer {
     padding: 0;
     margin: 0;
   }
-  .landing-text{
+  .landing-text {
     text-align: center;
   }
   .row {

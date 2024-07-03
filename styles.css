@@ -389,7 +389,7 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  max-width: 60%;
+  max-width: 75%;
   max-height: 80vh;
   margin: auto; /* Add this line to center within #team */
 }
@@ -708,12 +708,17 @@ footer {
   .card-2 {
     max-width: 100%;
     margin-bottom: auto;
+    max-height: fit-content;
+  }
+  #najnowsze-oferty {
+    height: auto;
   }
   .card {
     margin-bottom: 20px;
   }
-  .member-contact {
-    text-decoration: none;
+  a[href^="tel"] {
+    color: inherit; /* Dziedziczenie koloru tekstu */
+    text-decoration: none; /* Usunięcie podkreślenia */
   }
   .najnowsze-oferty-container {
     height: 100%;
