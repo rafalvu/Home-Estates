@@ -16,7 +16,6 @@ h3 {
   color: #131314;
   font-size: 5rem;
   font-weight: 250;
-  /* top: 248px; */
   text-align: left;
   letter-spacing: NaNpx;
   opacity: 1;
@@ -402,7 +401,7 @@ footer {
   color: #f3f3f3;
   text-decoration: none;
 }
-.footer-logo{
+.footer-logo {
   margin-top: 20px;
 }
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -469,6 +468,7 @@ footer {
     letter-spacing: NaNpx;
     opacity: 1;
     animation: fade-in 2s;
+    margin-top: 100px;
   }
   h4 {
     color: #f3f3f3;
@@ -495,7 +495,6 @@ footer {
     align-items: center;
     width: 100%;
     margin: auto;
-
   }
   .team-text {
     width: 80%;
@@ -557,7 +556,7 @@ footer {
     color: white;
     text-align: center;
   }
-  .landing-text{
+  .landing-text {
     text-align: center;
   }
   .row {
@@ -580,7 +579,7 @@ footer {
     align-items: center;
     margin-bottom: auto;
   }
-  .footer-contact{
+  .footer-contact {
     text-align: center;
   }
 }
