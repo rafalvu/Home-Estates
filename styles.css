@@ -78,6 +78,10 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
+i.fa {
+  pointer-events: none; /* Zapobiega blokowaniu kliknięć na ikonie */
+  
+}
 
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -109,6 +113,12 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  text-decoration: none; /* Optional: removes the underline from links */
+}
+
 
 #landing {
   display: flex;
@@ -731,5 +741,17 @@ footer {
   }
   .footer-contact {
     text-align: center;
+  }
+}
+/* Styl na safari na iphone */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  a[href^="tel"] {
+    color: inherit; /* Dziedziczenie koloru z rodzica */
+    text-decoration: none; /* Usunięcie podkreślenia */
+  }
+
+  a[href^="mailto"] {
+    color: inherit; /* Dziedziczenie koloru z rodzica */
+    text-decoration: none; /* Usunięcie podkreślenia */
   }
 }

@@ -324,6 +324,7 @@ footer {
     opacity: 1;
     animation: fade-in 2s;
     margin: 0;
+    margin-bottom: 20px;
   }
   .landing-container {
     display: flex;
