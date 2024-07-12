@@ -14,11 +14,20 @@ h2 {
 }
 h3 {
   color: #131314;
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: 250;
-  height: 10vh;
-  width: 100%;
-  text-align: center;
+  /* top: 248px; */
+  text-align: left;
+  letter-spacing: NaNpx;
+  opacity: 1;
+  animation: fade-in 2s;
+}
+h4 {
+  color: #f3f3f3;
+  font-size: 5rem;
+  font-weight: 250;
+  top: 348px;
+  text-align: left;
   letter-spacing: NaNpx;
   opacity: 1;
   animation: fade-in 2s;
@@ -29,7 +38,6 @@ body {
   margin: 0;
   max-width: 100%;
 }
-
 .topnav {
   background-color: transparent;
   overflow: hidden;
@@ -92,13 +100,15 @@ body {
 #landing {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start; /* Aligns children to the start of the container */
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   color: white;
   text-align: center;
-  background-image: url("uslugi_dodatkowe@2x.png");
+  background-image: url("../assets/rynek_wtorny.png");
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
 
 .landing-text {
@@ -116,60 +126,90 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding-left: 10%;
-  height: 80vh;
+  height: 100vh;
   width: 30%;
   background-color: #131314a1;
 }
-#services {
-  background-color: #f3f3f3;
-  margin: 0;
+.sprzedaj-heading {
+  padding-bottom: 15%;
 }
-.service {
+
+.o-nas-container {
   display: flex;
-  flex-direction: column;
+  height: 40vh;
+  background-color: #f5f6f8;
+  max-width: 100%;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.about-us-main {
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+}
+.about-us {
+  margin-left: 10%;
+  margin-bottom: 2em;
+}
+.zero-percent-text {
+  font-size: small;
+  color: #131314;
+  display: flex;
   width: 100%;
-  height: 100%;
-}
-.services-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.services-text {
-  padding: 20px;
-}
-.sprzedaj {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 50vh;
+  align-items: center;
+  padding-left: 10%;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#najnowsze-oferty {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #131314;
+}
+
+h5 {
   color: #f3f3f3;
-  background-image: url("background_2.png");
-  background-size: cover;
-  background-position: center;
+  margin: 10 0 6px;
+  font-weight: 500;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+h6 {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: 14px;
+  align-self: stretch;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+input,
+button {
+  display: block;
+  width: 240px;
+  height: 48px;
+  margin: 0 70px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: inherit;
+  outline-color: transparent;
+  text-align: center;
 }
 
 input {
@@ -182,6 +222,37 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.centered-button {
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  background-color: #f3f3f3;
+  padding-bottom: 20px;
+}
+.rectangle-button {
+  justify-content: center;
+  justify-items: center;
+  background-color: #c89f77;
+  color: #131314;
+  border-radius: 2px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-link {
+  text-decoration: none;
+  color: #131314;
+}
+
+.offers-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 50%;
+  margin-top: 10px;
+  font-size: small;
+  margin-left: 10%;
+}
 .logo {
   cursor: pointer;
   transition: 0.3s ease-out;
@@ -208,12 +279,89 @@ input::placeholder {
     transform: scale(1);
   }
 }
-
-.row {
-  max-width: 33.33%;
-  max-height: 50%;
+#team {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #f5f6f8;
 }
 
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.team-member {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 10px;
+}
+.row {
+  max-width: 33.33%;
+  max-height: 33.33%;
+  margin: 20px;
+}
+.card-image {
+  display: flex;
+  flex-direction: column;
+  /* border: #707070 1px solid; */
+  margin: 10px;
+}
+.image {
+  max-width: 20em;
+  max-height: 20em;
+}
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #f3f3f3;
+  background-color: #131314;
+  width: 100%;
+  padding: 5%;
+  height: fit-content;
+}
+.card-content {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 100;
+  flex-wrap: wrap;
+  color: #131314;
+  width: 100%;
+}
+.team-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  margin-top: 10px;
+  font-size: small;
+  margin-left: 10%;
+}
+.team-description-1 {
+  color: #7e7e7e;
+  margin-bottom: 10px;
+}
+
+.team-description-2 {
+  color: #c89f77;
+}
+.team-description-3 {
+  color: #7e7e7e;
+  margin-bottom: 10px;
+  width: 50%;
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -296,7 +444,6 @@ footer {
     font-weight: 250;
     color: #f3f3f3;
     margin: 0;
-    text-align: center;
   }
   h2 {
     font-size: 2rem;
@@ -304,57 +451,121 @@ footer {
     font-weight: 100;
     color: #f3f3f3;
     margin-bottom: 10px;
-    text-align: center;
   }
   h3 {
     color: #131314;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 250;
     width: 80%;
-    height: 10vh;
-    text-align: center;
+    height: 100px;
+    text-align: left;
     letter-spacing: NaNpx;
     opacity: 1;
     animation: fade-in 2s;
-    margin-bottom: 20px;
+    margin-top: 50px;
   }
-  .row {
-    max-width: 100%;
-    max-height: 50%;
+  h4 {
+    color: #f3f3f3;
+    font-size: 3rem;
+    font-weight: 250;
+    top: 348px;
+    text-align: left;
+    letter-spacing: NaNpx;
+    opacity: 1;
+    animation: fade-in 2s;
+    text-align: center;
   }
-  .services-container {
+  #team {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6f8;
+  }
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+  .team-text {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .o-nas-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    background-color: #f5f6f8;
+    text-align: center;
+  }
+  .zero-percent-text {
+    font-size: small;
+    color: #131314;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-main {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 10px;
+  }
+  .najnowsze-oferty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #131314;
+  }
+  .offers-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    font-size: small;
+  }
+
+  .team-description-3 {
+    color: #7e7e7e;
+    margin-bottom: 10px;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+  }
+  #landing {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 50vh;
+    color: white;
+    text-align: center;
   }
   .landing-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    background-color: #131314a1;
-  }
-  #services,
-  #landing {
-    overflow: auto;
-  }
-  #landing {
-    height: 50vh;
-  }
-  .service {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0;
+    height: 80vh;
     width: 100%;
-    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .landing-text {
+    text-align: center;
+  }
+  .row {
+    max-width: 100%;
+    max-height: 50%;
   }
   .footer-info {
     flex-direction: column;
