@@ -111,9 +111,24 @@ fetch(url, {
     return response.json();
   })
   .then((data) => {
-    console.log("Success:", data);
-    console.log(data.data[0]);
+    // console.log("Success:", data);
+    console.log(data.data[2]);
+    for (let i = 0; i < 3; i++) {
+      const aptPicture = data.data[i].pictures[0];
+      const aptStreetName = data.data[i].locationStreetName;
+      
+      const aptElement = document.querySelector(`.apt${i}`);
+      if (aptElement) {
+        aptElement.src = aptPicture;
+      }
+    
+      const aptTitle = document.querySelector(`.apt${i}-title`);
+      if (aptTitle) {
+        aptTitle.textContent = aptStreetName;
+      }
+    }
   })
   .catch((error) => {
     console.error("Error:", error);
   });
+
