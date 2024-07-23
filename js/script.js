@@ -99,6 +99,7 @@ fetch(url, {
   headers: {
     "Content-Type": "application/json",
     // Dodajemy te nagłówki, aby symulować zachowanie przeglądarki
+    AccessControlAllowOrigin: "https://app.esticrm.pl/apiClient/offer/list",
     Accept: "application/json, text/plain, /",
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -116,12 +117,12 @@ fetch(url, {
     for (let i = 0; i < 3; i++) {
       const aptPicture = data.data[i].pictures[0];
       const aptStreetName = data.data[i].locationStreetName;
-      
+
       const aptElement = document.querySelector(`.apt${i}`);
       if (aptElement) {
         aptElement.src = aptPicture;
       }
-    
+
       const aptTitle = document.querySelector(`.apt${i}-title`);
       if (aptTitle) {
         aptTitle.textContent = aptStreetName;
@@ -131,4 +132,3 @@ fetch(url, {
   .catch((error) => {
     console.error("Error:", error);
   });
-
