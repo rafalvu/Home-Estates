@@ -96,7 +96,7 @@ body {
   height: 80vh;
   color: white;
   text-align: center;
-  background-image: url("../assets/uslugi_dodatkowe@2x.png");
+  background-image: url("/assets/uslugi_dodatkowe@2x.png");
   background-size: cover;
   background-position: center;
 }
@@ -149,7 +149,7 @@ body {
   justify-content: center;
   height: 50vh;
   color: #f3f3f3;
-  background-image: url("../assets/background_2.png");
+  background-image: url("/assets/background_2.png");
   background-size: cover;
   background-position: center;
 }

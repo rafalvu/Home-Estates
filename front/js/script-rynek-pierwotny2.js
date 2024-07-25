@@ -1,15 +1,8 @@
-const apiUrl = "https://homeestates.pl/api/proxy";
+const apiUrl = "http://localhost:443/api/proxy";
 
 async function fetchData() {
   try {
-    const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json, text/plain, */*",
-      },
-      mode: "cors",
-    });
+    const response = await fetch(apiUrl);
 
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);

@@ -97,7 +97,7 @@ body {
   height: 80vh;
   color: white;
   text-align: center;
-  background-image: url("../assets/sprzedaj_z_nami_x2.png");
+  background-image: url("/assets/sprzedaj_z_nami_x2.png");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -156,7 +156,7 @@ body {
   justify-content: center;
   height: 50vh;
   color: #f3f3f3;
-  background-image: url("../assets/background_2.png");
+  background-image: url("/assets/background_2.png");
   background-size: cover;
   background-position: center;
 }

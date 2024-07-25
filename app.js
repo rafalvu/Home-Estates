@@ -9,7 +9,7 @@ const mime = require("mime-types");
 const app = express();
 
 // Middleware do obsługi CORS
-app.use((req, res, next) => {
+app.use((_req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -26,28 +26,40 @@ app.use((req, res, next) => {
   }
   next();
 });
+
 // Logowanie żądań
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
   console.log(`Request URL: ${req.url}`);
   next();
 });
 
 // Serwowanie plików statycznych
-app.use(express.static(path.join(__dirname, "my-frontend-app")));
 
-// Domyślna trasa dla głównego URL
-app.get("/", (req, res) => {
-  res.sendFile(
-    path.join(
-      __dirname,
-      "my-frontend-app",
-      "/index.html",
-      "/pages/rynek-pierwotny.html",
-      "/pages/rynek-wtorny.html",
-      "/extra-page.html"
-    )
-  );
+// Ta zmiana powoduje, ze serwer bedzie "serwować" wszystkie pliki js-owe pod relatywną ściezką "/js", wiec w skryptach mozemy zastosowac import relatywny
+// typu /js/plik.js
+app.use('/js', express.static(path.join(__dirname, 'front', 'js')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/styles', express.static(path.join(__dirname, 'front', 'styles')));
+
+// Przekazywanie odpowiedniego pliku HTML poprzez Express dla wybranego przez uzytkownika route'a
+
+/* 1. Uzytkownik wchodzi na homeestates.pl/sprzedaj-z-nami */
+/* 2. Dzięki ponizszej linijce serwer rozpoznaje request o ten route i poprzez res.sendFile wysyła response (odpowiedź) w postaci podania statycznego pliku HTML do przeglądarki -> front-end!  */
+app.get('/sprzedaj-z-nami', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'pages', 'sprzedaj-z-nami.html'));
 });
+app.get('/uslugi-dodatkowe', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'pages', 'uslugi-dodatkowe.html'));
+});
+app.get('/rynek-wtorny', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'pages', 'rynek-wtorny.html'));
+});
+app.get('/rynek-pierwotny', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'pages', 'rynek-pierwotny.html'));
+});
+app.get('/', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+})
 
 // Trasa proxy
 app.get("/api/proxy", async (req, res) => {
@@ -61,16 +73,11 @@ app.get("/api/proxy", async (req, res) => {
 
   const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${status}&updateDate=${updateDate}`;
 
-  console.log(`Fetching URL: ${url}`); // Logowanie URL
+  console.log(`Fetching URL: ${url}`); // Logowanie URL\
 
-  return request({ url }, (error, response, body) => {
-    if (error || response.statusCode !== 200) {
-      return res.status(500).json({ type: "error", message: error.message });
-    }
+  request(url).pipe(res);
+})
 
-    res.json(JSON.parse(body));
-  });
-});
 // try {
 //   const response = await fetch(url);
 //   if (!response.ok) {
@@ -92,5 +99,5 @@ app.get("/api/proxy", async (req, res) => {
 
 // Uruchamianie serwera HTTPS
 app.listen(443, () => {
-  console.log("Server running on port 443 (HTTPS)");
+  console.log("Server running on port 443");
 });
