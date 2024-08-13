@@ -35,54 +35,6 @@ for (let textarea of textareas) {
   autoResize(textarea);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
-  const phoneIcon = document.querySelector(".fa-phone");
-  const envelopeIcon = document.querySelector(".fa-envelope");
-
-  // Funkcja zmieniająca kolory ikon w zależności od sekcji
-  function changeIconColor() {
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        // Przykładowa logika: zmiana koloru w zależności od ID sekcji
-        switch (section.id) {
-          case "landing":
-            phoneIcon.style.color = "#f3f3f3";
-            envelopeIcon.style.color = "#f3f3f3";
-            break;
-          case "o-nas":
-            phoneIcon.style.color = "#131314";
-            envelopeIcon.style.color = "#131314";
-            break;
-          case "najnowsze-oferty":
-            phoneIcon.style.color = "#f3f3f3";
-            envelopeIcon.style.color = "#f3f3f3";
-            break;
-          case "sprzedaj-z-nami":
-            phoneIcon.style.color = "#f3f3f3";
-            envelopeIcon.style.color = "#f3f3f3";
-            break;
-          case "team":
-            phoneIcon.style.color = "#f3f3f3";
-            envelopeIcon.style.color = "#f3f3f3";
-            break;
-          default:
-            phoneIcon.style.color = "#f3f3f3";
-            envelopeIcon.style.color = "#f3f3f3";
-        }
-      }
-    });
-  }
-
-  // Nasłuchiwanie na zdarzenia scroll i resize
-  window.addEventListener("scroll", changeIconColor);
-  window.addEventListener("resize", changeIconColor);
-
-  // Pierwsze wywołanie funkcji na wypadek, gdyby sekcja była już widoczna
-  changeIconColor();
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const url = "https://homeestates.pl/api/proxy";
 
