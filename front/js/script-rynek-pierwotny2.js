@@ -26,12 +26,19 @@ for (let textarea of textareas) {
   autoResize(textarea);
 }
 
-  
-  const apiUrl = "https://homeestates.pl/api/proxy";
-
 async function fetchData() {
+  const apiUrl = "https://app.esticrm.pl/apiClient/offer/list";
+  const companyId = "8160";
+  const token = "4e921a377b";
+  const skip = 0;
+  const take = 9;
+  const apiStatus = "3,99";
+  const updateDate = "2022-07-09 12:00:00";
+
+  const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}`;
+
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -95,4 +102,4 @@ function updateElement(selector, { src, textContent, style }) {
 }
 
 // Wywołanie funkcji fetchData po załadowaniu DOM
-document.addEventListener('DOMContentLoaded', fetchData);
+document.addEventListener("DOMContentLoaded", fetchData);
