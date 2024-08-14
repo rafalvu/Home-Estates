@@ -4,13 +4,6 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const app = express();
 
-const CRMProxy = createProxyMiddleware({
-  target: "https://app.esticrm.pl",
-  changeOrigin: true,
-});
-
-app.use("/api", CRMProxy);
-
 // Serwowanie plików statycznych
 // Ta zmiana powoduje, ze serwer bedzie "serwować" wszystkie pliki js-owe pod relatywną ściezką "/js", wiec w skryptach mozemy zastosowac import relatywny
 // typu /js/plik.js
@@ -36,6 +29,14 @@ app.get("/rynek-pierwotny", (_req, res) => {
 app.get("/", (_req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
+
+app.use(
+  "/api",
+  createProxyMiddleware({
+    target: "https://app.esticrm.pl",
+    changeOrigin: true,
+  })
+);
 
 // Uruchamianie serwera HTTPS
 app.listen(443, () => {
