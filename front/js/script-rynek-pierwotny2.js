@@ -27,7 +27,7 @@ for (let textarea of textareas) {
 }
 
 async function fetchData() {
-  const apiUrl = "https://app.esticrm.pl/apiClient/offer/list";
+  const apiUrl = "/api/apiClient/offer/list";
   const companyId = "8160";
   const token = "4e921a377b";
   const skip = 0;
@@ -39,7 +39,7 @@ async function fetchData() {
 
   try {
     const response = await fetch(url);
-
+    console.log(response);
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
     }

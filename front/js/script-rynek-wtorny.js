@@ -25,7 +25,15 @@ for (let textarea of textareas) {
   // Call the function initially to resize on page load
   autoResize(textarea);
 }
-const url = "https://homeestates.pl/api/proxy";
+const apiUrl = "/api/apiClient/offer/list";
+const companyId = "8160";
+const token = "4e921a377b";
+const skip = 0;
+const take = 9;
+const apiStatus = "3,99";
+const updateDate = "2022-07-09 12:00:00";
+
+const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}`;
 
 fetch(url, {
   method: "GET",
