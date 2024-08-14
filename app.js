@@ -1,28 +1,22 @@
 const express = require("express");
 const path = require("path");
-const cors = require("cors");
 const { createProxyMiddleware } = require("http-proxy-middleware");
-// Inicjalizacja aplikacji Express
+
 const app = express();
 
-app.use(cors());
-
-app.use(
-  "/api",
-  createProxyMiddleware({
-    target: "https://app.esticrm.pl",
-    changeOrigin: true,
-  })
-);
-
-// Logowanie żądań
-app.use((req, _res, next) => {
-  console.log(`Request URL: ${req.url}`);
-  next();
+const CRMProxy = createProxyMiddleware({
+  target: "https://app.esticrm.pl",
+  changeOrigin: true,
 });
 
-// Serwowanie plików statycznych
+app.use("/api", CRMProxy);
 
+app.use((_req, res, next) => {
+  console.log('Proxy response: ', res);
+  next();
+}, CRMProxy);
+
+// Serwowanie plików statycznych
 // Ta zmiana powoduje, ze serwer bedzie "serwować" wszystkie pliki js-owe pod relatywną ściezką "/js", wiec w skryptach mozemy zastosowac import relatywny
 // typu /js/plik.js
 app.use("/js", express.static(path.join(__dirname, "front", "js")));
@@ -30,7 +24,6 @@ app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/styles", express.static(path.join(__dirname, "front", "styles")));
 
 // Przekazywanie odpowiedniego pliku HTML poprzez Express dla wybranego przez uzytkownika route'a
-
 /* 1. Uzytkownik wchodzi na homeestates.pl/sprzedaj-z-nami */
 /* 2. Dzięki ponizszej linijce serwer rozpoznaje request o ten route i poprzez res.sendFile wysyła response (odpowiedź) w postaci podania statycznego pliku HTML do przeglądarki -> front-end!  */
 app.get("/sprzedaj-z-nami", (_req, res) => {
