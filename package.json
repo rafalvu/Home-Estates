@@ -13,7 +13,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^3.0.0"
   }
 }
