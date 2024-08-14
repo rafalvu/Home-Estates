@@ -11,11 +11,6 @@ const CRMProxy = createProxyMiddleware({
 
 app.use("/api", CRMProxy);
 
-app.use((_req, res, next) => {
-  console.log('Proxy response: ', res);
-  next();
-}, CRMProxy);
-
 // Serwowanie plików statycznych
 // Ta zmiana powoduje, ze serwer bedzie "serwować" wszystkie pliki js-owe pod relatywną ściezką "/js", wiec w skryptach mozemy zastosowac import relatywny
 // typu /js/plik.js
