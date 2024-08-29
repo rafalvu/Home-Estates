@@ -25,85 +25,85 @@ for (let textarea of textareas) {
   // Call the function initially to resize on page load
   autoResize(textarea);
 }
-const apiUrl = "/api/apiClient/offer/list";
-const companyId = "8160";
-const token = "4e921a377b";
-const skip = 0;
-const take = 9;
-const apiStatus = "3,99";
-const updateDate = "2022-07-09 12:00:00";
 
-const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}`;
+async function fetchData(market) {
+  const apiUrl = "/api/apiClient/offer/list";
+  const companyId = "8160";
+  const token = "4e921a377b";
+  const skip = 0;
+  const take = 90;
+  const apiStatus = "3,99";
+  const updateDate = "2024-07-09 12:00:00";
 
-fetch(url, {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json, text/plain, */*",
-    "User-Agent":
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-  },
-  mode: "cors",
-})
-  .then((response) => {
+  const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}&market=${market}`;
+
+  try {
+    const response = await fetch(url);
+    // console.log(response);
     if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
+      throw new Error(`Network response was not ok: ${response.statusText}`);
     }
-    return response.json();
-  })
-  .then((data) => {
-    // Przetwarzanie danych...
-    console.log("Success:", data);
-    // console.log(data.data[0]);
-    for (let i = 0; i < 9; i++) {
-      const aptPicture = data.data[i].pictures[0];
-      const aptStreetName = data.data[i].locationStreetName;
-      const aptPrice = data.data[i].price;
-      const aptPricePermeter = data.data[i].pricePermeter;
-      const aptAreaTotal = data.data[i].areaTotal;
-      const aptRoomNumber = data.data[i].apartmentRoomNumber;
 
-      const aptElement = document.querySelector(`.apt${i}`);
-      if (aptElement) {
-        aptElement.src = aptPicture;
-        aptElement.style.height = "20em";
-        aptElement.style.width = "30em";
-      }
-
-      const aptTitle = document.querySelector(`.apt${i}-title`);
-      if (aptTitle) {
-        aptTitle.textContent = "Lokalizacja: " + aptStreetName;
-        aptTitle.style.margin = "5px 0 0 0";
-      }
-
-      const aptPrice2 = document.querySelector(`.apt${i}-price`);
-      if (aptPrice2) {
-        aptPrice2.textContent = "Cena: " + Math.round(aptPrice) + " PLN";
-        aptPrice2.style.margin = "5px 0 0 0";
-      }
-
-      const aptPricePermeter2 = document.querySelector(
-        `.apt${i}-price-permeter`
-      );
-      if (aptPricePermeter2) {
-        aptPricePermeter2.textContent =
-          "Cena: " + Math.round(aptPricePermeter) + " PLN";
-        aptPricePermeter2.style.margin = "5px 0 0 0";
-      }
-
-      const aptAreaTotal2 = document.querySelector(`.apt${i}-area-total`);
-      if (aptAreaTotal2) {
-        aptAreaTotal2.textContent = "Metraż: " + aptAreaTotal + " m²";
-        aptAreaTotal2.style.margin = "5px 0 0 0";
-      }
-
-      const aptRoomNumber2 = document.querySelector(`.apt${i}-room-number`);
-      if (aptRoomNumber2) {
-        aptRoomNumber2.textContent = "Ilość pokoi: " + aptRoomNumber;
-        aptRoomNumber2.style.margin = "5px 0 0 0";
-      }
-    }
-  })
-  .catch((error) => {
+    const data = await response.json();
+    console.log(data);
+    processApartments(data.data, market);
+  } catch (error) {
     console.error("Error:", error);
+  }
+}
+
+function processApartments(apartments, market) {
+  // Filter apartments based on the market parameter
+  const filteredApartments = apartments.filter((apt) => apt.market === market);
+
+  filteredApartments.slice(0, 9).forEach((apt, i) => {
+    const aptPicture = apt.pictures[0];
+    const aptStreetName = apt.locationStreetName;
+    const aptPrice = apt.price;
+    const aptPricePermeter = apt.pricePermeter;
+    const aptAreaTotal = apt.areaTotal;
+    const aptRoomNumber = apt.apartmentRoomNumber;
+
+    updateElement(`.apt${i}`, {
+      src: aptPicture,
+      style: { height: "20em", width: "30em", objectFit: "cover" },
+    });
+
+    updateElement(`.apt${i}-title`, {
+      textContent: `Lokalizacja: ${aptStreetName}`,
+      style: { margin: "5px 0 0 0" },
+    });
+
+    updateElement(`.apt${i}-price`, {
+      textContent: `Cena: ${Math.round(aptPrice)} PLN`,
+      style: { margin: "5px 0 0 0" },
+    });
+
+    updateElement(`.apt${i}-price-permeter`, {
+      textContent: `Cena: ${Math.round(aptPricePermeter)} PLN`,
+      style: { margin: "5px 0 0 0" },
+    });
+
+    updateElement(`.apt${i}-area-total`, {
+      textContent: `Metraż: ${aptAreaTotal} m²`,
+      style: { margin: "5px 0 0 0" },
+    });
+
+    updateElement(`.apt${i}-room-number`, {
+      textContent: `Ilość pokoi: ${aptRoomNumber}`,
+      style: { margin: "5px 0 0 0" },
+    });
   });
+}
+
+function updateElement(selector, { src, textContent, style }) {
+  const element = document.querySelector(selector);
+  if (element) {
+    if (src) element.src = src;
+    if (textContent) element.textContent = textContent;
+    if (style) Object.assign(element.style, style);
+  }
+}
+
+// Wywołanie funkcji fetchData po załadowaniu DOM
+document.addEventListener("DOMContentLoaded", fetchData(11));

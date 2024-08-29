@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const aptElement = document.querySelector(`.apt${i}`);
         if (aptElement) {
           aptElement.src = aptPicture;
+          aptElement.style.objectFit = "contain";
         }
 
         const aptTitle = document.querySelector(`.apt${i}-title`);

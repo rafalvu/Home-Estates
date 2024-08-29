@@ -35,7 +35,6 @@ app.use(
   createProxyMiddleware({
     target: "https://app.esticrm.pl",
     changeOrigin: true,
-    pathRewrite: { '^/api': '' }
   })
 );
 

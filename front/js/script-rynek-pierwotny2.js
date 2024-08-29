@@ -26,33 +26,37 @@ for (let textarea of textareas) {
   autoResize(textarea);
 }
 
-async function fetchData() {
+async function fetchData(market) {
   const apiUrl = "/api/apiClient/offer/list";
   const companyId = "8160";
   const token = "4e921a377b";
   const skip = 0;
-  const take = 9;
+  const take = 90;
   const apiStatus = "3,99";
-  const updateDate = "2022-07-09 12:00:00";
+  const updateDate = "2023-07-09 12:00:00";
 
-  const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}`;
+  const url = `${apiUrl}?company=${companyId}&token=${token}&skip=${skip}&take=${take}&status=${apiStatus}&updateDate=${updateDate}&market=${market}`;
 
   try {
     const response = await fetch(url);
-    console.log(response);
+    // console.log(response);
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
     }
 
     const data = await response.json();
-    processApartments(data.data);
+    console.log(data);
+    processApartments(data.data, market);
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-function processApartments(apartments) {
-  apartments.slice(0, 9).forEach((apt, i) => {
+function processApartments(apartments, market) {
+  // Filter apartments based on the market parameter
+  const filteredApartments = apartments.filter((apt) => apt.market === market);
+
+  filteredApartments.slice(0, 9).forEach((apt, i) => {
     const aptPicture = apt.pictures[0];
     const aptStreetName = apt.locationStreetName;
     const aptPrice = apt.price;
@@ -62,7 +66,7 @@ function processApartments(apartments) {
 
     updateElement(`.apt${i}`, {
       src: aptPicture,
-      style: { height: "20em", width: "30em" },
+      style: { height: "20em", width: "30em", objectFit: "cover" },
     });
 
     updateElement(`.apt${i}-title`, {
@@ -102,4 +106,4 @@ function updateElement(selector, { src, textContent, style }) {
 }
 
 // Wywołanie funkcji fetchData po załadowaniu DOM
-document.addEventListener("DOMContentLoaded", fetchData);
+document.addEventListener("DOMContentLoaded", fetchData(10));
