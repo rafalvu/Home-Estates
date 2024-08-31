@@ -4,7 +4,7 @@
   "main": "app.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon",
     "modules:reinstall": "npx rimraf --glob **/node_modules && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +12,11 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "dependencies": { 
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^3.0.0"
+    "http-proxy-middleware": "^3.0.0",
+    "nodemon": "^3.1.4"
   }
 }
