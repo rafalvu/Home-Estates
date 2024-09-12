@@ -1,118 +1,3 @@
-h1 {
-  font-size: 5rem;
-  font-family: "Poppins Regular", sans-serif;
-  font-weight: 250;
-  color: #f3f3f3;
-  margin: 0;
-}
-h2 {
-  font-size: 2.5rem;
-  font-family: "Poppins Regular", sans-serif;
-  font-weight: 100;
-  color: #f3f3f3;
-  margin-bottom: 10px;
-
-  text-align: left;
-}
-
-h3 {
-  color: #131314;
-  font-size: 5rem;
-  font-weight: 250;
-  /* top: 248px; */
-  width: 40%;
-  height: 100px;
-  margin-left: 10%;
-  text-align: left;
-  letter-spacing: NaNpx;
-  opacity: 1;
-  animation: fade-in 2s;
-}
-h4 {
-  color: #f3f3f3;
-  font-size: 5rem;
-  font-weight: 250;
-  top: 348px;
-  text-align: left;
-  letter-spacing: NaNpx;
-  opacity: 1;
-  animation: fade-in 2s;
-}
-h5 {
-  color: #f3f3f3;
-  font-size: 1rem;
-  font-weight: 250;
-  letter-spacing: NaNpx;
-  margin: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  max-width: 100%;
-}
-
-.topnav {
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-}
-#myTopnav {
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-  padding-top: 78px;
-  margin-right: 20%;
-  width: 100%;
-  z-index: 10;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-i.fa {
-  pointer-events: none; /* Zapobiega blokowaniu kliknięć na ikonie */
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: #af8451;
-  text-decoration: underline;
-  animation: fade-in 0.5s;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  /* background-color: #04AA6D; */
-  color: #f3f3f3;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
-.nav-content {
-  margin-right: 10%;
-}
-.list-element {
-  color: #f3f3f3;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  list-style-type: none;
-}
-
 a[href^="tel:"],
 a[href^="mailto:"] {
   text-decoration: none; /* Optional: removes the underline from links */
@@ -128,26 +13,6 @@ a[href^="mailto:"] {
   background-size: cover;
   background-position: center;
   z-index: 1;
-}
-
-.landing-text {
-  width: 80%;
-  margin: 0px;
-  text-align: left;
-  letter-spacing: NaNpx;
-  color: #f3f3f3;
-  opacity: 1;
-  animation: fade-in 2s;
-}
-.landing-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 10%;
-  height: 100vh;
-  width: 30%;
-  align-self: flex-start; /* Aligns the container to the left */
 }
 
 .sprzedaj {
@@ -201,21 +66,19 @@ textarea:focus {
 
 .o-nas-container {
   display: flex;
-  height: 70vh;
+  max-width: var(--max-screen-desktop-s);
+  margin-inline: auto;
+  gap: 5rem;
+  padding-inline: var(--spacing-xl);
+  padding-block: var(--spacing-lg);
 }
+
 .about-us-main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  margin-left: 10%;
-  margin-right: 10%;
 }
-.about-us {
-  margin-left: 10%;
-  margin-bottom: 2em;
-  max-width: 100%;
-}
+
 .zero-percent-main {
   display: flex;
   flex-direction: column;
@@ -238,23 +101,7 @@ textarea:focus {
   color: #131314;
   max-width: 100%;
 }
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #najnowsze-oferty {
   display: flex;
   align-items: center;
@@ -273,20 +120,6 @@ textarea:focus {
     0px -1.5px 79.1px rgba(0, 0, 0, 0.026),
     0px 28.5px 147.9px rgba(0, 0, 0, 0.042), 0px 174px 354px rgba(0, 0, 0, 0.07);
   z-index: 0;
-}
-
-h5 {
-  color: #f3f3f3;
-  margin: 10 0 6px;
-  font-weight: 500;
-}
-
-h6 {
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 24px;
-  font-weight: 400;
-  font-size: 14px;
-  align-self: stretch;
 }
 
 input,
@@ -357,32 +190,7 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
   font-size: small;
   margin-left: 10%;
 }
-.logo {
-  cursor: pointer;
-  transition: 0.3s ease-out;
-  position: fixed;
-  top: 78px;
-  left: 5%;
-}
 
-.logo:hover {
-  transform: translateY(-5px);
-}
-.logo-clicked {
-  animation: click-animation 0.5s ease-out;
-}
-
-@keyframes click-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 #team {
   display: flex;
   align-items: center;
@@ -445,43 +253,7 @@ x .swiper .swiper-pagination .swiper-pagination-bullet {
   margin-bottom: 10px;
   width: 50%;
 }
-footer {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  background-color: #131314;
-  color: #f3f3f3;
-  font-size: 14px;
-  font-weight: 100;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-}
-.footer-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: #131314;
-  color: #f3f3f3;
-  font-size: 14px;
-  font-weight: 100;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-}
-.footer-contact {
-  text-align: left;
-  color: #f3f3f3;
-  text-decoration: none;
-}
-.footer-link {
-  color: #f3f3f3;
-  text-decoration: none;
-}
-.footer-logo {
-  margin-top: 20px;
-}
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 800px) {
   .nav-content a {
@@ -533,53 +305,6 @@ footer {
     text-align: left;
   }
 
-  .logo {
-    cursor: pointer;
-    transition: 0.3s ease-out;
-    position: absolute;
-
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  h1 {
-    font-size: 3rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 250;
-    color: #f3f3f3;
-    margin: 0;
-    text-align: left;
-    z-index: 1;
-  }
-  h2 {
-    font-size: 2rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 100;
-    color: #f3f3f3;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  h3 {
-    color: #131314;
-    font-size: 3rem;
-    font-weight: 250;
-    top: 348px;
-    width: 80%;
-    height: 50px;
-    text-align: center;
-    letter-spacing: NaNpx;
-    opacity: 1;
-    animation: fade-in 2s;
-  }
-  h4 {
-    font-size: 3rem;
-    font-weight: 250;
-    top: 348px;
-    text-align: left;
-    letter-spacing: NaNpx;
-    opacity: 1;
-    animation: fade-in 2s;
-    text-align: center;
-  }
   .landing-text {
     text-align: center;
   }
@@ -593,15 +318,7 @@ footer {
     text-align: center;
     z-index: 1;
   }
-  .landing-container {
-    display: flex;
-    align-items: center;
-    height: 80vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 1;
-  }
+
   #team {
     flex-direction: column;
     height: auto;
@@ -647,17 +364,7 @@ footer {
   .o-nas-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-  }
-  .about-us-main {
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-  }
-  .about-us {
-    margin-left: 10%;
-    margin-bottom: 0;
+    gap: 5rem;
   }
   .zero-percent {
     font-size: 6rem;
@@ -746,15 +453,6 @@ footer {
   }
   .najnowsze-oferty-container {
     height: 100%;
-  }
-  .footer-info {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: auto;
-  }
-  .footer-contact {
-    text-align: center;
   }
 }
 /* Styl na safari na iphone */

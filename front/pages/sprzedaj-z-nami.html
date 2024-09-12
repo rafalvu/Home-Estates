@@ -8,6 +8,8 @@
     <meta name="keywords" content="nieruchomości, sprzedaż mieszkań, rynek pierwotny, rynek wtórny, doradztwo kredytowe, wykończenie pod klucz, odbiór techniczny, notariat, mieszkania, domy, Home Estates">
     <title>Home Estates</title>
     <link rel="icon" type="image/x-icon" href="/assets/sygnet_black.svg">
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/navigation.css" />
     <link rel="stylesheet" href="/styles/styles_sprzedaj_z_nami.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,26 +33,29 @@
   <body>
     <section id="landing">
     <!-- Navbar -->
-    <div class="topnav" id="myTopnav">
-      <div class="nav-content">
-        <a href="tel:+48572468871"><i class="fa fa-phone fa-2x"></i></a>
-        <a href="mailto:biuro@homeestates.pl"
-          ><i class="fa fa-envelope fa-2x"></i
-        ></a>
+    <nav class="mobile-nav">
+      <a class="mobile-nav-logo-wrapper" href="/">
+        <img
+          class="mobile-nav-logo-img"
+          src="/assets/logo_white_1_be.png"
+          alt="Home Estates Logo"
+        />
+      </a>
+      <i class="fa fa-solid fa-bars fa-lg mobile-nav-hamburger"></i>
+      <ul class="mobile-nav-menu">
         <a href="/sprzedaj-z-nami">Sprzedaj z nami</a>
         <a href="/uslugi-dodatkowe">Usługi Dodatkowe</a>
         <a href="/rynek-wtorny">Rynek Wtórny</a>
         <a href="/rynek-pierwotny">Rynek Pierwotny</a>
         <a href="/">O nas</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-
-      <a href="/"
-        ><img class="logo" src="/assets/logo_white_1_be.png" alt="Logo"
-      /></a>
-    </div>
+        <div class="mobile-nav-menu-contactbox">
+          <a href="tel:+48572468871"> <i class="fa fa-phone fa-lg"></i></a>
+          <a href="mailto:biuro@homeestates.pl"
+            ><i class="fa fa-envelope fa-lg"></i
+          ></a>
+        </div>
+      </ul>
+    </nav>
 
     <!-- Landing Page -->
 
