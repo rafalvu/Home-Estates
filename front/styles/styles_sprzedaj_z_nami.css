@@ -2,14 +2,14 @@ h1 {
   font-size: 5rem;
   font-family: "Poppins Regular", sans-serif;
   font-weight: 250;
-  color: #f3f3f3;
+  color: var(--main-white);
   margin: 0;
 }
 h2 {
   font-size: 2.5rem;
   font-family: "Poppins Regular", sans-serif;
   font-weight: 100;
-  color: #f3f3f3;
+  color: var(--main-white);
   margin-bottom: 10px;
 }
 h3 {
@@ -69,7 +69,7 @@ body {
 /* Add an active class to highlight the current page */
 .topnav a.active {
   /* background-color: #04AA6D; */
-  color: #f3f3f3;
+  color: var(--main-white);
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -82,7 +82,7 @@ body {
 }
 
 .list-element {
-  color: #f3f3f3;
+  color: var(--main-white);
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -106,7 +106,7 @@ body {
 }
 
 #services {
-  background-color: #f3f3f3;
+  background-color: var(--main-white);
   margin: 0;
 }
 .service {
@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 50vh;
-  color: #f3f3f3;
+  color: var(--main-white);
   background-image: url("/assets/background_2.png");
   background-size: cover;
   background-position: center;
@@ -262,7 +262,7 @@ input::placeholder {
     font-size: 3rem;
     font-family: "Poppins Regular", sans-serif;
     font-weight: 250;
-    color: #f3f3f3;
+    color: var(--main-white);
     margin: 0;
     text-align: center;
   }
@@ -270,7 +270,7 @@ input::placeholder {
     font-size: 2rem;
     font-family: "Poppins Regular", sans-serif;
     font-weight: 100;
-    color: #f3f3f3;
+    color: var(--main-white);
     margin-bottom: 10px;
     text-align: center;
   }
@@ -298,7 +298,7 @@ input::placeholder {
     margin: 0px;
     text-align: center;
     letter-spacing: NaNpx;
-    color: #f3f3f3;
+    color: var(--main-white);
     opacity: 1;
     animation: fade-in 2s;
   }

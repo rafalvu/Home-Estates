@@ -1,12 +1,14 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+const mobileNavHamburger = document.querySelector(".mobile-nav-hamburger");
+const mobileNavMenu = document.querySelector(".mobile-nav-menu");
+
+mobileNavHamburger.addEventListener("click", function () {
+  if (mobileNavMenu.classList.contains("open")) {
+    mobileNavMenu.classList.remove("open");
   } else {
-    x.className = "topnav";
+    mobileNavMenu.classList.add("open");
   }
-}
+});
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   speed: 500,

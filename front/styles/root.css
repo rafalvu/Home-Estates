@@ -13,6 +13,7 @@
   --max-screen-tablet: 768px;
   --max-screen-desktop-s: 1279px;
   --min-screen-desktop-lg: 1280px;
+  --main-white: #f3f3f3;
 }
 
 @keyframes fade-in {
@@ -33,14 +34,18 @@ h1 {
   font-size: 5rem;
   font-family: "Poppins Regular", sans-serif;
   font-weight: 400;
-  color: #f3f3f3;
+  color: var(--main-white);
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "Poppins Regular", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 10px;
+}
+
+.invert-color {
+  color: var(--main-white);
 }
 
 h3 {
@@ -54,7 +59,7 @@ h3 {
 }
 
 h4 {
-  color: #f3f3f3;
+  color: var(--main-white);
   font-size: 1.5rem;
   font-weight: 250;
   top: 348px;
@@ -63,7 +68,7 @@ h4 {
 }
 
 h5 {
-  color: #f3f3f3;
+  color: var(--main-white);
   margin: 10 0 6px;
   font-weight: 500;
 }
@@ -115,7 +120,7 @@ button {
   width: 80%;
   margin: 0px;
   text-align: left;
-  color: #f3f3f3;
+  color: var(--main-white);
   opacity: 1;
   animation: fade-in 2s;
   background: rgba(0, 0, 0, 0.11);
@@ -151,7 +156,7 @@ footer {
   flex-direction: column;
   height: auto;
   background-color: #131314;
-  color: #f3f3f3;
+  color: var(--main-white);
   font-size: 14px;
   font-weight: 100;
   text-align: center;
@@ -163,7 +168,7 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   background-color: #131314;
-  color: #f3f3f3;
+  color: var(--main-white);
   font-size: 14px;
   font-weight: 100;
   text-align: center;
@@ -172,11 +177,11 @@ footer {
 }
 .footer-contact {
   text-align: left;
-  color: #f3f3f3;
+  color: var(--main-white);
   text-decoration: none;
 }
 .footer-link {
-  color: #f3f3f3;
+  color: var(--main-white);
   text-decoration: none;
 }
 .footer-logo {
