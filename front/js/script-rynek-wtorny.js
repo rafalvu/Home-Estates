@@ -1,3 +1,13 @@
+const mobileNavHamburger = document.querySelector(".mobile-nav-hamburger");
+const mobileNavMenu = document.querySelector(".mobile-nav-menu");
+
+mobileNavHamburger.addEventListener("click", function () {
+  if (mobileNavMenu.classList.contains("open")) {
+    mobileNavMenu.classList.remove("open");
+  } else {
+    mobileNavMenu.classList.add("open");
+  }
+});
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myTopnav");

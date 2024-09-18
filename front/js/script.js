@@ -1,3 +1,14 @@
+const mobileNavHamburger = document.querySelector(".mobile-nav-hamburger");
+const mobileNavMenu = document.querySelector(".mobile-nav-menu");
+
+mobileNavHamburger.addEventListener("click", function () {
+  if (mobileNavMenu.classList.contains("open")) {
+    mobileNavMenu.classList.remove("open");
+  } else {
+    mobileNavMenu.classList.add("open");
+  }
+});
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   speed: 500,
