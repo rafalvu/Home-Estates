@@ -33,14 +33,14 @@ body {
 h1 {
   font-size: 5rem;
   font-family: "Poppins Regular", sans-serif;
-  font-weight: 400;
+  font-weight: 250;
   color: var(--main-white);
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Poppins Regular", sans-serif;
-  font-weight: 600;
+  font-weight: 250;
   margin-bottom: 10px;
 }
 
@@ -197,5 +197,18 @@ footer {
   }
   .footer-contact {
     text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+    font-family: "Poppins Regular", sans-serif;
+    font-weight: 250;
+    color: var(--main-white);
+  }
+  
+  h2 {
+    font-size: 3rem;
+    font-family: "Poppins Regular", sans-serif;
+    font-weight: 250;
+    margin-bottom: 10px;
   }
 }

@@ -18,6 +18,14 @@
   max-width: var(--min-screen-desktop-lg);
   margin-inline: auto;
 }
+.team-members{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
 
 .centered-button {
   justify-content: center;

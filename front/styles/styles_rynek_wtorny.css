@@ -25,11 +25,14 @@
   padding-bottom: 15%;
 }
 
-.o-nas-container {
+#o-nas {
+  padding-inline: var(--spacing-lg);
+  padding-block: var(--spacing-xl);
+  max-width: var(--min-screen-desktop-lg);
+  margin: auto;
+  text-align: center;
   display: flex;
-  background-color: #f5f6f8;
-  justify-content: center;
-  padding: var(--spacing-lg);
+  flex-direction: column;
 }
 
 .zero-percent-text {
@@ -37,6 +40,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.team-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  > * {
+    flex: 1 1 calc(33.33% - 40px); /* Adjust the width to fit 3 items per row */
+    margin: 10px;
+  }
 }
 
 @keyframes fade-in {
@@ -266,7 +281,7 @@ input::placeholder {
     background-color: #f5f6f8;
     text-align: left;
   }
-  
+
   .zero-percent-text {
     color: #131314;
     display: flex;
