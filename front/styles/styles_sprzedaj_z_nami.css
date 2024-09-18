@@ -209,6 +209,7 @@ input::placeholder {
   .landing-description {
     text-align: center;
     width: 80%;
+    font-size: smaller;
   }
 
   .row {
