@@ -1,29 +1,3 @@
-h1 {
-  font-size: 5rem;
-  font-family: "Poppins Regular", sans-serif;
-  font-weight: 250;
-  color: var(--main-white);
-  margin: 0;
-}
-h2 {
-  font-size: 2.5rem;
-  font-family: "Poppins Regular", sans-serif;
-  font-weight: 100;
-  color: var(--main-white);
-  margin-bottom: 10px;
-}
-h3 {
-  color: #131314;
-  font-size: 2.5rem;
-  font-weight: 250;
-  height: 10vh;
-  width: 100%;
-  text-align: center;
-  letter-spacing: NaNpx;
-  opacity: 1;
-  animation: fade-in 2s;
-}
-
 .list-element {
   color: var(--main-white);
   font-size: 15px;
@@ -39,41 +13,52 @@ h3 {
   flex-direction: column;
   justify-content: flex-start; /* Aligns children to the start of the container */
   align-items: center;
-  height: auto;
+  height: 100vh;
   color: white;
   text-align: center;
-  background-image: url("/assets/sprzedaj_z_nami.png");
+  background-image: url("/assets/uslugi_dodatkowe@2x.png");
   background-size: cover;
   background-position: center;
   z-index: 1;
 }
-.landing-container {
-  width: 100%;
-}
+
 
 #services {
   background-color: var(--main-white);
   margin: 0;
 }
+
+.service > div {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#services h3 {
+  color: #131314;
+}
+
 .service {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  height: 100%;
+  margin-block: var(--spacing-xl);
+  gap: 2rem;
+  flex: 1;
+  text-align: center;
 }
 .services-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-inline: var(--spacing-lg);
 }
+
 .services-text {
   padding: 20px;
-  text-align: center;
 }
 .sprzedaj {
   display: flex;
@@ -84,15 +69,6 @@ h3 {
   background-image: url("/assets/background_2.png");
   background-size: cover;
   background-position: center;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade-in {
@@ -164,53 +140,6 @@ input::placeholder {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
-  h1 {
-    font-size: 3rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 250;
-    color: var(--main-white);
-    margin: 0;
-    text-align: center;
-  }
-  h2 {
-    font-size: 2rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 100;
-    color: var(--main-white);
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  h3 {
-    color: #131314;
-    font-size: 2rem;
-    font-weight: 250;
-    width: 80%;
-    height: 10vh;
-    text-align: center;
-    letter-spacing: NaNpx;
-    opacity: 1;
-    animation: fade-in 2s;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
-  #landing {
-    height: 50vh;
-  }
-  .landing-text {
-    width: 80%;
-    margin: 0px;
-    text-align: center;
-    letter-spacing: NaNpx;
-    color: var(--main-white);
-    opacity: 1;
-    animation: fade-in 2s;
-  }
-  .landing-description {
-    text-align: center;
-    width: 80%;
-  }
-
   .row {
     max-width: 100%;
     max-height: 50%;
@@ -220,8 +149,17 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  #services,
+  #landing {
+    overflow: auto;
+  }
+  #landing {
+    height: 50vh;
   }
   .service {
     display: flex;
@@ -232,7 +170,5 @@ input::placeholder {
     width: 100%;
     height: 100%;
   }
-  .service-icon {
-    margin-top: 20px;
-  }
+
 }

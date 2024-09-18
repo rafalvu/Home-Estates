@@ -233,39 +233,6 @@ input::placeholder {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
-  #myTopnav.responsive {
-    width: 80%;
-    margin: 20px, 0, 0, 0;
-    z-index: 10;
-    overflow: visible;
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-  .nav-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    background-color: #7e7e7ed1;
-    border-radius: 5px;
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    z-index: 10;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    z-index: 10;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
   .logo {
     cursor: pointer;
     transition: 0.3s ease-out;
