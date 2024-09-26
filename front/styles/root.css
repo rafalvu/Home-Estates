@@ -166,6 +166,7 @@ footer {
 .footer-info {
   display: flex;
   flex-direction: row;
+  padding-top: 2rem;
   justify-content: space-evenly;
   background-color: #131314;
   color: var(--main-white);
