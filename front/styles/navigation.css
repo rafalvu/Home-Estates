@@ -1,0 +1,72 @@
+/* ------ MOBILE NAVIGATION ------ */
+
+.mobile-nav {
+  display: inline-block;
+  width: calc(100vw - var(--spacing-lg));
+  margin-inline: auto;
+  height: 5vh;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  padding-inline: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.mobile-nav-logo-wrapper,
+.mobile-nav-logo-img {
+  height: 100%;
+}
+
+.mobile-nav-menu {
+  flex-basis: 100%;
+  display: none; /* Menu is hidden as default */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: #e9e9e9;
+  border-radius: var(--spacing-sm);
+}
+
+.mobile-nav-menu.open {
+  display: flex; /* Menu is displayed when it gets the open class name */
+}
+
+.mobile-nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav-menu-contactbox {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 800px) {
+  .mobile-nav-hamburger {
+    display: none !important;
+  }
+
+  .mobile-nav-menu {
+    flex-basis: auto;
+    flex-direction: row;
+    background-color: transparent;
+    gap: var(--spacing-md);
+    margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: flex !important; /* Overriding the display none/flex toggle on mobile */
+  }
+
+  .mobile-nav-menu a {
+    color: white;
+  }
+}

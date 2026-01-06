@@ -1,0 +1,427 @@
+a[href^="tel:"],
+a[href^="mailto:"],
+a {
+  text-decoration: none; /* Optional: removes the underline from links */
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("/assets/ali-moradi-Erg07pIM_ac-unsplas.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.sprzedaj {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: var(--main-white);
+  background-image: url("/assets/background_2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  margin-top: 20px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-white) 6d;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--main-white);
+}
+
+textarea {
+  width: 60%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  font-family: poppins;
+  border: 1px solid var(--main-white) 6d;
+  background-color: transparent;
+}
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--main-white);
+}
+
+.o-nas-container {
+  display: flex;
+  max-width: var(--max-screen-desktop-s);
+  margin-inline: auto;
+  gap: 5rem;
+  padding: var(--spacing-lg);
+}
+
+.about-us-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-sm);
+}
+
+.zero-percent-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin: auto;
+}
+.zero-percent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zero-percent {
+  font-size: 10rem;
+  color: #af8451;
+  margin-right: 20px;
+}
+.zero-percent-text {
+  font-size: small;
+  color: #131314;
+  max-width: 100%;
+}
+
+#najnowsze-oferty {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  background-color: #131314;
+}
+
+.card-2 {
+  width: 500px;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0px -6.8px 9.8px rgba(0, 0, 0, 0.003),
+    0px -10.8px 23.5px rgba(0, 0, 0, 0.008),
+    0px -10.3px 44.3px rgba(0, 0, 0, 0.016),
+    0px -1.5px 79.1px rgba(0, 0, 0, 0.026),
+    0px 28.5px 147.9px rgba(0, 0, 0, 0.042), 0px 174px 354px rgba(0, 0, 0, 0.07);
+  z-index: 0;
+}
+
+input,
+button {
+  display: block;
+  width: 240px;
+  height: 48px;
+  margin: 0 70px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: inherit;
+  outline-color: transparent;
+  text-align: center;
+}
+
+input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  padding: 12px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  background: #af8451;
+  color: #f9f9f9;
+  border: 0;
+  cursor: pointer;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 80px 0 130px;
+}
+x .swiper .swiper-pagination .swiper-pagination-bullet {
+  box-shadow: none;
+  background: #af8451;
+  width: 16px;
+  height: 16px;
+}
+.swiper-pagination-bullet {
+  background: #af8451 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.swiper-horizontal .swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: auto;
+  bottom: 56px;
+}
+
+.swiper-slide img {
+  height: 500px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+.offers-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#team {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center horizontally */
+  width: 100%;
+  height: 100vh;
+  background-color: #131314;
+
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 75%;
+  height: auto;
+  max-height: auto;
+  margin: auto; 
+}
+.row {
+  max-height: 50%;
+}
+.card-image {
+  width: 200px;
+  height: 200px;
+  border: #707070 1px solid;
+  margin: 10px;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5px;
+  color: var(--main-white);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 100;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  color: var(--main-white);
+  width: 90%;
+  padding: 10px;
+}
+
+.team-description-1 {
+  color: #7e7e7e;
+  margin-bottom: 10px;
+}
+
+.team-description-2 {
+  color: #c89f77;
+}
+.team-description-3 {
+  color: #7e7e7e;
+  margin-bottom: 10px;
+  font-size: small;
+  width: 80%;
+  justify-content: center;
+  text-align: left;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 800px) {
+  .nav-content a {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    z-index: 10;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+  .landing-text {
+    text-align: center;
+  }
+
+  #landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  #team {
+    flex-direction: column;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .team-members {
+    max-width: 100%;
+    max-height: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sprzedaj {
+    flex-direction: column;
+    background-color: var(--main-white) 6d;
+  }
+  .contact-form {
+    background-color: transparent;
+  }
+  .sprzedaj {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+    color: var(--main-white);
+    background-image: url("/assets/background_2.png");
+    background-size: cover;
+    background-position: center;
+  }
+  textarea:focus {
+    outline: none;
+    border: 2px solid var(--main-white);
+    background-color: var(--main-white) 6d;
+  }
+  #email:focus {
+    background-color: var(--main-white) 6d;
+  }
+  #phone:focus {
+    background-color: var(--main-white) 6d;
+  }
+  .o-nas-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  .zero-percent {
+    font-size: 6rem;
+    color: #af8451;
+    margin-right: 20px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .zero-percent-text {
+    font-size: small;
+    color: #131314;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .zero-percent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .zero-percent-main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .najnowsze-oferty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #131314;
+    margin-bottom: auto;
+    padding: 0;
+  }
+  .swiper-slide img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  .offers-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--spacing-lg);
+  }
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 90px;
+  }
+
+  .row {
+    max-width: 100%;
+    max-height: 50%;
+  }
+  .card-2 {
+    max-width: 100%;
+    margin-bottom: auto;
+    max-height: fit-content;
+  }
+  #najnowsze-oferty {
+    height: auto;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  a[href^="tel"] {
+    color: inherit; /* Dziedziczenie koloru tekstu */
+    text-decoration: none; /* Usunięcie podkreślenia */
+  }
+  .najnowsze-oferty-container {
+    height: 100%;
+  }
+}
+/* Styl na safari na iphone */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  a[href^="tel"] {
+    color: inherit; /* Dziedziczenie koloru z rodzica */
+    text-decoration: none; /* Usunięcie podkreślenia */
+  }
+
+  a[href^="mailto"] {
+    color: inherit; /* Dziedziczenie koloru z rodzica */
+    text-decoration: none; /* Usunięcie podkreślenia */
+  }
+}

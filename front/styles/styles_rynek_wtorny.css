@@ -1,0 +1,296 @@
+.list-element {
+  color: var(--main-white);
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns children to the start of the container */
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("/assets/rynek_wtorny.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.sprzedaj-heading {
+  padding-bottom: 15%;
+}
+
+#o-nas {
+  padding-inline: var(--spacing-lg);
+  padding-block: var(--spacing-xl);
+  max-width: var(--min-screen-desktop-lg);
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.zero-percent-text {
+  color: #131314;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  > * {
+    flex: 1 1 calc(33.33% - 40px); /* Adjust the width to fit 3 items per row */
+    margin: 10px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#najnowsze-oferty {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #131314;
+}
+
+h5 {
+  color: var(--main-white);
+  margin: 10 0 6px;
+  font-weight: 500;
+}
+
+h6 {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: 14px;
+  align-self: stretch;
+}
+
+input,
+button {
+  display: block;
+  width: 240px;
+  height: 48px;
+  margin: 0 70px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: inherit;
+  outline-color: transparent;
+  text-align: center;
+}
+
+input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  padding: 12px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.centered-button {
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  background-color: var(--main-white);
+  padding-bottom: 20px;
+}
+.rectangle-button {
+  justify-content: center;
+  justify-items: center;
+  background-color: #c89f77;
+  color: #131314;
+  border-radius: 2px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-link {
+  text-decoration: none;
+  color: #131314;
+}
+
+.offers-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 50%;
+  margin-top: 10px;
+  font-size: small;
+  margin-left: 10%;
+}
+.logo {
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  position: fixed;
+  top: 78px;
+  left: 5%;
+}
+
+.logo:hover {
+  transform: translateY(-5px);
+}
+.logo-clicked {
+  animation: click-animation 0.5s ease-out;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 10px;
+}
+.row {
+  max-width: 33.33%;
+  max-height: 33.33%;
+  margin: 20px;
+}
+.card-image {
+  display: flex;
+  flex-direction: column;
+  /* border: #707070 1px solid; */
+  margin: 10px;
+}
+.image {
+  max-width: 20em;
+  max-height: 20em;
+}
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: var(--main-white);
+  background-color: #131314;
+  width: 100%;
+  padding: 5%;
+  height: fit-content;
+}
+.card-content {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 100;
+  flex-wrap: wrap;
+  color: #131314;
+  width: 100%;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 800px) {
+  .nav-content a {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    z-index: 10;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+  .logo {
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .o-nas-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #f5f6f8;
+    text-align: left;
+  }
+
+  .zero-percent-text {
+    color: #131314;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .najnowsze-oferty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #131314;
+  }
+  .offers-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    font-size: small;
+  }
+
+  .team-description-3 {
+    color: #7e7e7e;
+    margin-bottom: 10px;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+  }
+  #landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+  }
+
+  .row {
+    max-width: 100%;
+    max-height: 50%;
+  }
+}

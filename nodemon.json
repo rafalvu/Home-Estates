@@ -1,0 +1,4 @@
+{
+    "watch": ["app.js", "front/*"],
+    "ext": "js, css, html"
+}

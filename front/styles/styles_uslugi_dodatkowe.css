@@ -1,0 +1,174 @@
+.list-element {
+  color: var(--main-white);
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns children to the start of the container */
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  background-image: url("/assets/uslugi_dodatkowe@2x.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+
+#services {
+  background-color: var(--main-white);
+  margin: 0;
+}
+
+.service > div {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#services h3 {
+  color: #131314;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block: var(--spacing-xl);
+  gap: 2rem;
+  flex: 1;
+  text-align: center;
+}
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-inline: var(--spacing-lg);
+}
+
+.services-text {
+  padding: 20px;
+}
+.sprzedaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  color: var(--main-white);
+  background-image: url("/assets/background_2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  padding: 12px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  position: fixed;
+  top: 78px;
+  left: 5%;
+}
+
+.logo:hover {
+  transform: translateY(-5px);
+}
+.logo-clicked {
+  animation: click-animation 0.5s ease-out;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.row {
+  max-width: 33.33%;
+  max-height: 50%;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 800px) {
+  .nav-content a {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    z-index: 10;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+  .row {
+    max-width: 100%;
+    max-height: 50%;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #services,
+  #landing {
+    overflow: auto;
+  }
+  #landing {
+    height: 50vh;
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
