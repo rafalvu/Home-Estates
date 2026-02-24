@@ -30,6 +30,11 @@ body {
   max-width: 100%;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   font-size: 5rem;
   font-family: "Poppins Regular", sans-serif;
@@ -72,15 +77,6 @@ h5 {
   margin: 10 0 6px;
   font-weight: 500;
 }
-
-h6 {
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 24px;
-  font-weight: 400;
-  font-size: 14px;
-  align-self: stretch;
-}
-
 
 p {
   line-height: 200%;
@@ -201,15 +197,9 @@ footer {
   }
   h1 {
     font-size: 3rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 250;
-    color: var(--main-white);
   }
   
   h2 {
     font-size: 3rem;
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 250;
-    margin-bottom: 10px;
   }
 }

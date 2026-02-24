@@ -70,6 +70,11 @@ app.get("/rynek-wtorny", (_req, res) => {
 app.get("/rynek-pierwotny", (_req, res) => {
   res.sendFile(path.join(__dirname, "front", "pages", "rynek-pierwotny.html"));
 });
+app.get("/polityka-prywatnosci", (_req, res) => {
+  res.sendFile(
+    path.join(__dirname, "front", "pages", "polityka-prywatnosci.html")
+  );
+});
 app.get("/", (_req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });

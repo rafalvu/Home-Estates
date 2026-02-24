@@ -341,15 +341,42 @@
               >biuro@homeestates.pl</a
             >
           </p>
+           <p><a href="/polityka-prywatnosci">Polityka Prywatności</a></p>
         </div>
       </div>
       <div class="credits">
         <p>
-          &copy; 2025 Home Estates. All rights reserved.<br />Dveloped by
+          &copy; 2026 Home Estates. All rights reserved.<br />Developed by
           <a href="https://rafalvu.pl/">Rafał Walczewski</a>;
         </p>
       </div>
     </footer>
+    <!-- Cookie / Privacy Consent Banner -->
+    <div id="cookie-banner">
+      <div class="cookie-banner-content">
+        <p>
+          Ta strona korzysta z plików cookies w celu zapewnienia prawidłowego
+          działania serwisu. Korzystając ze strony, wyrażasz zgodę na ich
+          używanie zgodnie z naszą
+          <a href="/polityka-prywatnosci" style="color: #af8451; text-decoration: underline;">Polityką prywatności</a>.
+        </p>
+        <button id="cookie-accept-btn">Akceptuję</button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var banner = document.getElementById('cookie-banner');
+        var btn = document.getElementById('cookie-accept-btn');
+        if (!localStorage.getItem('cookie-consent')) {
+          banner.style.display = 'block';
+        }
+        btn.addEventListener('click', function () {
+          localStorage.setItem('cookie-consent', 'accepted');
+          banner.style.display = 'none';
+        });
+      })();
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/script2.js"></script>
   </body>
